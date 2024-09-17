@@ -1,15 +1,13 @@
-import { Header, ScrollIcon } from "./components";
-
-import pages from "./data/pages";
-
+import { Header, ScrollIcon, PageList } from "./components";
 import { useEffect, useState } from "react";
+import pages from "./data/pages";
 
 function App() {
   const [index, setIndex] = useState(0);
   const pagesCount = pages.length;
-  const element = pages[index].page();
+  // const element = pages[index].page();
 
-  console.log(index);
+  // console.log(index);
 
   useEffect(() => {
     window.addEventListener("wheel", (event) => {
@@ -45,7 +43,7 @@ function App() {
   return (
     <>
       <Header pages={pages} onClick={handleChangePage} index={index} />
-      {element}
+      <PageList pages={pages} index={index} />
       <ScrollIcon index={index} pagesCount={pagesCount} />
     </>
   );
