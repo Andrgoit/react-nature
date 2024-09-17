@@ -1,28 +1,28 @@
-import England from "src/pages/England";
-import NewZeland from "src/pages/NewZeland";
-import Switzerland from "src/pages/Switzerland";
+// import England from "src/pages/England";
+// import NewZeland from "src/pages/NewZeland";
+// import Switzerland from "src/pages/Switzerland";
 // import ContactUs from "src/pages/ContactUs";
 
-import england1 from "src/assets/img/England/England1.jpg";
-import england2 from "src/assets/img/England/England2.jpg";
-import england3 from "src/assets/img/England/England3.jpg";
-import england4 from "src/assets/img/England/England4.jpg";
+import england1 from "src/img/England/England1.jpg";
+import england2 from "src/img/England/England2.jpg";
+import england3 from "src/img/England/England3.jpg";
+import england4 from "src/img/England/England4.jpg";
 
-import newZeland1 from "src/assets/img/NewZeland/newZeland1.jpg";
-import newZeland2 from "src/assets/img/NewZeland/newZeland2.jpg";
-import newZeland3 from "src/assets/img/NewZeland/newZeland3.jpg";
-import newZeland4 from "src/assets/img/NewZeland/newZeland4.jpg";
+import newZeland1 from "src/img/NewZeland/newZeland1.jpg";
+import newZeland2 from "src/img/NewZeland/newZeland2.jpg";
+import newZeland3 from "src/img/NewZeland/newZeland3.jpg";
+import newZeland4 from "src/img/NewZeland/newZeland4.jpg";
 
-import switzerland1 from "src/assets/img/Switzerland/Switzerland1.jpg";
-import switzerland2 from "src/assets/img/Switzerland/Switzerland2.jpg";
-import switzerland3 from "src/assets/img/Switzerland/Switzerland3.jpg";
-import switzerland4 from "src/assets/img/Switzerland/Switzerland4.jpg";
+import switzerland1 from "src/img/Switzerland/Switzerland1.jpg";
+import switzerland2 from "src/img/Switzerland/Switzerland2.jpg";
+import switzerland3 from "src/img/Switzerland/Switzerland3.jpg";
+import switzerland4 from "src/img/Switzerland/Switzerland4.jpg";
 
 const pages = [
   {
     id: 0,
     title: "England",
-    page: England,
+    // page: England,
     subItems: [
       {
         id: 1,
@@ -53,7 +53,7 @@ const pages = [
   {
     id: 1,
     title: "New Zeland",
-    page: NewZeland,
+    // page: NewZeland,
     subItems: [
       {
         id: 1,
@@ -84,7 +84,7 @@ const pages = [
   {
     id: 2,
     title: "Switzerland",
-    page: Switzerland,
+    // page: Switzerland,
     subItems: [
       {
         id: 1,
