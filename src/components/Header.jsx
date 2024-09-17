@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
+import giticon from "src/assets/github.svg";
 
 export default function Header({ pages, onClick, index }) {
   const [showModal, setShowModal] = useState(false);
@@ -41,7 +42,7 @@ export default function Header({ pages, onClick, index }) {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed bottom-0 left-0 right-0 top-0 z-10 flex items-center justify-center bg-gradient-to-tr from-[#4b6cb7] to-[#182848] sm:hidden"
+            className="fixed bottom-0 left-0 right-0 top-0 z-10 flex flex-col items-center justify-around bg-gradient-to-tr from-[#4b6cb7] to-[#182848] sm:hidden"
           >
             <MdClose
               size={28}
@@ -62,6 +63,14 @@ export default function Header({ pages, onClick, index }) {
                 </a>
               ))}
             </nav>
+            <a
+              href="https://github.com/Andrgoit/react-nature"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setShowModal(false)}
+            >
+              <img src={giticon} alt="icon" />
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

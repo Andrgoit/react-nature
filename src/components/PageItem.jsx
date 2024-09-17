@@ -3,7 +3,34 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function PageItem({ item }) {
   const { title, subItems } = item;
 
-  //   console.log(subItems);
+  const letterVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: (i) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+      },
+    }),
+  };
+
+  const desVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
+  const letters = title.split("").map((letter, idx) => (
+    <motion.span
+      key={idx}
+      custom={idx}
+      variants={letterVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {letter}
+    </motion.span>
+  ));
 
   const { image, description } = subItems[0];
   return (
@@ -26,8 +53,17 @@ export default function PageItem({ item }) {
         className="flex flex-col items-center justify-center"
       >
         <div className="cont flex flex-col gap-8 text-center text-white">
-          <h2 className="text-4xl">{title}</h2>
-          <p>{description}</p>
+          <div className="flex justify-center text-4xl uppercase">
+            {letters}
+          </div>
+          <motion.p
+            variants={desVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+          >
+            {description}
+          </motion.p>
         </div>
       </motion.div>
     </AnimatePresence>

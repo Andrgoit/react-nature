@@ -9,41 +9,72 @@ function App() {
 
   // console.log(index);
 
+  const handlerScroll = (e, index, pagesCount) => {
+    if (e.deltaY < 0) {
+      if (index > 0) {
+        console.log("Прокрутка вверх");
+        setIndex(index - 1);
+        return;
+      }
+      console.log("конец Прокрутка вверх");
+      setIndex(0);
+      return;
+    }
+    if (e.deltaY > 0) {
+      if (index < pagesCount - 1) {
+        setIndex(index + 1);
+        console.log("Прокрутка вниз");
+        return;
+      }
+      setIndex(pagesCount - 1);
+      console.log("конец Прокрутка вниз");
+      return;
+    } else {
+      return;
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("wheel", (event) => {
-      if (event.deltaY < 0) {
-        if (index > 0) {
-          console.log("Прокрутка вверх");
-          setIndex(index - 1);
-          return;
-        }
-        console.log("конец Прокрутка вверх");
-        setIndex(0);
-        return;
-      }
-      if (event.deltaY > 0) {
-        if (index < pagesCount - 1) {
-          setIndex(index + 1);
-          console.log("Прокрутка вниз");
-          return;
-        }
-        setIndex(pagesCount - 1);
-        console.log("конец Прокрутка вниз");
-        return;
-      } else {
-        return;
-      }
-    });
+    window.addEventListener("wheel", (e) =>
+      handlerScroll(e, index, pagesCount),
+    );
   }, [index, pagesCount]);
 
   const handleChangePage = (index) => {
     setIndex(index);
   };
 
+  const handlerSwipeDown = () => {
+    if (index > 0) {
+      console.log("Свайп вниз");
+      setIndex(index - 1);
+      return;
+    }
+    console.log("конец свайпа вниз");
+    setIndex(0);
+    return;
+  };
+
+  const handlerSwipeUp = () => {
+    if (index < pagesCount - 1) {
+      setIndex(index + 1);
+      console.log("свайп вверх");
+      return;
+    }
+    setIndex(pagesCount - 1);
+    console.log("конец свайпа вверх");
+    return;
+  };
+
   return (
     <>
       <Header pages={pages} onClick={handleChangePage} index={index} />
-      <PageList pages={pages} index={index} />
+      <PageList
+        pages={pages}
+        index={index}
+        handlerSwipeUp={handlerSwipeUp}
+        handlerSwipeDown={handlerSwipeDown}
+      />
       <ScrollIcon index={index} pagesCount={pagesCount} />
     </>
   );
