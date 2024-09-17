@@ -6,7 +6,7 @@ import Switzerland from "src/pages/Switzerland";
 import england1 from "src/assets/img/England/England1.jpg";
 import england2 from "src/assets/img/England/England2.jpg";
 import england3 from "src/assets/img/England/England3.jpg";
-import england4 from "src/assets/img/England/England3.jpg";
+import england4 from "src/assets/img/England/England4.jpg";
 
 import newZeland1 from "src/assets/img/NewZeland/newZeland1.jpg";
 import newZeland2 from "src/assets/img/NewZeland/newZeland2.jpg";

@@ -5,7 +5,7 @@ export default function ScrollIcon({ index, pagesCount }) {
   // console.log(index);
 
   return (
-    <div className="fixed bottom-3 left-0 right-0 z-[1] flex items-center justify-center sm:bottom-10">
+    <div className="fixed bottom-3 left-0 right-0 z-[1] flex items-center justify-center sm:bottom-5">
       <motion.div
         animate={{ y: [0, 5, 0] }}
         transition={{ duration: 1, repeat: Infinity }}
