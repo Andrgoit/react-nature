@@ -78,7 +78,7 @@ export default function PageItem({ item }) {
         }}
         className="flex flex-col items-center justify-center overflow-hidden"
       >
-        <div className="cont flex flex-col items-center gap-8 text-center text-white">
+        <div className="cont flex flex-col items-center gap-20 text-center text-white">
           <div className="flex max-w-[1024px] flex-col gap-20 text-white">
             <motion.h2
               initial={{ y: -50, opacity: 0, filter: "blur(10px)" }}
@@ -104,7 +104,7 @@ export default function PageItem({ item }) {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-5 flex items-center gap-4"
+            className="flex items-center gap-4"
           >
             <button
               className="cursor-pointer rounded-xl bg-white/30 px-3 py-1 transition-all duration-300 hover:scale-110"

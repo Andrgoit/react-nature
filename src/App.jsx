@@ -1,4 +1,4 @@
-import { Header, PageList } from "./components";
+import { Header, PageList, ScrollIcon } from "./components";
 import { useEffect, useState } from "react";
 import pages from "./data/pages";
 
@@ -75,7 +75,7 @@ function App() {
         handlerSwipeUp={handlerSwipeUp}
         handlerSwipeDown={handlerSwipeDown}
       />
-      {/* <ScrollIcon index={index} pagesCount={pagesCount} /> */}
+      <ScrollIcon index={index} pagesCount={pagesCount} />
     </>
   );
 }
