@@ -54,11 +54,7 @@ export default function PageList({
   //   console.log("newElements", newElements);
 
   return (
-    <main
-      className=""
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-    >
+    <main onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
       {elements[index]}
     </main>
   );

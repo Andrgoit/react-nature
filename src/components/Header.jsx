@@ -14,7 +14,13 @@ export default function Header({ pages, onClick, index }) {
   return (
     <header className="fixed left-0 right-0 z-10 py-3">
       <div className="cont flex justify-between text-white">
-        <span className="text-xl first-letter:text-orange-600">Nature</span>
+        <motion.span
+          animate={{ scale: [1, 1.2, 1.2, 1], rotate: [0, 0, 360, 360] }}
+          transition={{ duration: 3, repeat: Infinity, repeatDelay: 10 }}
+          className="text-xl first-letter:text-orange-600"
+        >
+          Nature
+        </motion.span>
         <nav className="hidden items-center gap-10 sm:flex">
           {pages.map(({ id, title }) => (
             <a

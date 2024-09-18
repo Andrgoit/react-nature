@@ -25,10 +25,11 @@
 
 body {
   /* font-family: "Montserrat Alternates"; */
-  font-weight: 500;
+  /* font-weight: 500; */
   width: 100vw;
   height: 100vh;
   background-color: #2e2e2e;
+  overflow: hidden;
 }
 
 .cont {
