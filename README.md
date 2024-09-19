@@ -1,13 +1,8 @@
-# React + Vite + Tailwind
+# React-Nature
 
-Минимальная настройка:
+PET-проект. Адаптивный сайт-слайдер. Написан при помощи react, frame-motion, tailwind, formik...
 
-- установлен Tailwind
-- сортировка классов при помощи `prettier-plugin-tailwindcss`
-- сервер перенастроен на http://localhost:3000/
-- алиас настроен на src/
-- импорт svg-картинок:
-
-  `import star from "src/assets/icons/star.svg";` - как картинка
-
-  `import Star from "src/assets/icons/star.svg?react";` - как компонент
+![screen1](/public/1_england.JPG)
+![screen2](/public/2_newZeland.JPG)
+![screen3](/public//3_swiss.JPG)
+![screen4](/public/4_contactUs.JPG)
