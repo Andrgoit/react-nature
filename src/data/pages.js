@@ -95,7 +95,7 @@ const pages = [
         id: 1,
         itemTitle: "Switzerland",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempore vero quam praesentium cupiditate doloribus, numquam eos eius? Aliquam cum illum perspiciatis sint voluptates sapiente neque temporibus magni cupiditate molestias!",
+          "Switzerland, officially the Swiss Confederation, is a landlocked country located in west-central Europe. It is bordered by Italy to the south, France to the west, Germany to the north, and Austria and Liechtenstein to the east. Switzerland is geographically divided among the Swiss Plateau, the Alps and the Jura; the Alps occupy the greater part of the territory, whereas most of the country's population of 9 million are concentrated on the plateau, which hosts its largest cities and economic centres, including Zurich, Geneva, and Basel.",
         image: switzerland1,
       },
       {

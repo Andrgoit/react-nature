@@ -22,8 +22,6 @@ export default function PageItem({ item }) {
   const [index, setIndex] = useState(0);
   const { title, page, subItems } = item;
 
-  console.log(index);
-
   if (page) {
     return page();
   }
@@ -31,8 +29,6 @@ export default function PageItem({ item }) {
   // const { itemTitle, image, description } = subItems[index];
   const { image, description } = subItems[index];
   const ArrayLenght = subItems.length;
-
-  console.log("ArrayLenght", ArrayLenght);
 
   const handlerClickNextBtn = () => {
     if (index < ArrayLenght - 1) {
@@ -67,7 +63,6 @@ export default function PageItem({ item }) {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        // key={index}
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`,
           width: "100%",

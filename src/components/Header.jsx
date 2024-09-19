@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
-import giticon from "src/assets/github.svg";
+import giticon from "src/assets/icon/github.svg";
 
 export default function Header({ pages, onClick, index }) {
   const [showModal, setShowModal] = useState(false);

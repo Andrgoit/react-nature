@@ -1,5 +1,4 @@
 import { PageItem } from ".";
-// import ContactUs from "src/pages/ContactUs";
 
 export default function PageList({
   pages,
@@ -27,31 +26,25 @@ export default function PageList({
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 0) {
-        console.log("левый свайп");
+        // console.log("левый свайп");
       } else {
-        /* right swipe */
-        console.log("правый свайп");
+        // console.log("правый свайп");
       }
     } else {
       if (yDiff > 0) {
-        /* up swipe */
+        // up swipe
         handlerSwipeUp();
       } else {
-        /* down swipe */
+        //  down swipe
         handlerSwipeDown();
       }
     }
-    /* reset values */
+    // reset values
     xDown = null;
     yDown = null;
   };
 
   const elements = pages.map((item) => <PageItem item={item} key={item.id} />);
-  //   console.log(pages);
-  //   const contact = { id: 4, key: 4, ContactUs };
-  //   console.log(elements);
-  //   const newElements = [...elements, contact];
-  //   console.log("newElements", newElements);
 
   return (
     <main onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
